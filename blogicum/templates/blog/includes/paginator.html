@@ -1,0 +1,5 @@
+{% if page_obj.has_other_pages %}<nav class="mt-4"><ul class="pagination">
+{% if page_obj.has_previous %}<li><a href="?page={{ page_obj.previous_page_number }}">Предыдущая</a></li>{% endif %}
+<li>Страница {{ page_obj.number }} из {{ page_obj.paginator.num_pages }}</li>
+{% if page_obj.has_next %}<li><a href="?page={{ page_obj.next_page_number }}">Следующая</a></li>{% endif %}
+</ul></nav>{% endif %}
